@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Error Title: Discover - no application backends found
-# Solution: Install backends
+# Error Title: sddm takes too long in boot-screen to finally load. And passwords sometime
+# Solution: Install haveged
 
-sudo pacman -S packagekit-qt5
-sudo pacman -S fwupd
-sudo pacman -S flatpak
-sudo pacman -S kns
+sudo pacman -S haveged
+sudo systemctl enable haveged
+sudo systemctl start haveged
